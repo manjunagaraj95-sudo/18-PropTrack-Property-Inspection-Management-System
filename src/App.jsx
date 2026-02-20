@@ -439,7 +439,7 @@ const EmptyState = ({ title, message, actionText, onAction, icon: Icon }) => (
 
 const CardComponent = ({ title, subTitle, status, details, onClick, footerText, accentColor, children }) => {
     const statusClass = status ? `status-${status.toLowerCase().replace(/ /g, '_')}` : '';
-    const headerColor = statusColors[status.toUpperCase()] || accentColor || var('--primary-color');
+    const headerColor = statusColors[status.toUpperCase()] || accentColor || 'var(--primary-color)';
     const backgroundTint = status ? `${statusColors[status.toUpperCase()]}10` : 'var(--secondary-color)'; // 10% opacity
 
     return (
